@@ -1,0 +1,41 @@
+\begin{proof}
+	Let $\beta_1 = \sett{v_1,v_2,\cdots,v_n},v_1,v_2,\cdots,v_n \in W_1$,
+		
+		 $\beta_2 = \sett{u_1,u_2,\cdots,u_m},u_1,u_2,\cdots,u_m \in W_2$
+		
+		$W_1 + W_2 = \left\{\sum_{i=1}^n a_iv_i + \sum_{j=1}^{m}b_ju_j ~|~ a_1,\cdots,a_n,b_1,\cdots,b_m \in \mathcal{F}\,\right\} $
+		\vspace*{0.2cm}
+		
+		\textbf{Claim : } $\spann{\beta_1 \cup \beta_2} \subseteq W_1 + W_2$
+		
+		let $x \in \spann{\beta_1 \cup \beta_2}~, x = a_1v_1 + a_2v_2 + \cdots + b_1u_1 + b_2u_2 + \cdots + b_mu_m$
+		
+		$\because W_1,W_2$ is a subspace of V $\therefore \sum^{n}_{i=1}a_iv_i \in W_1~,~ \sum^{m}_{i=1}b_iu_i \in W_2$
+		
+		$\therefore x \in W_1 + W_2,\spann{\beta_1 \cup \beta_2} \subseteq W_1 + W_2$
+		
+		\vspace*{0.3cm}
+		\textbf{Claim.} $W_1 + W_2 \subseteq \spann{\beta_1 \cup \beta_2}$
+		
+		Let $x \in W_1 + W_2, x = (a_1v_1 + \cdots + a_nv_n) + (b_1u_1 + \cdots  + b_mu_m)$
+		
+		$\therefore x \in \spann{\beta_1 \cup \beta_2}$\ 
+		$\therefore W_1 + W_2 \subseteq \spann{\beta_1 \cup \beta_2}$\ 
+		$\therefore \spann{\beta_1 \cup \beta_2} = W_1 + W_2$
+
+		
+	    \vspace*{0.3cm}
+		\textbf{Claim} ${\beta_1 \cup \beta_2}$ is linearly independent
+		
+		$\sum^n_{i=1}a_iv_1 + \sum^m_{j=1}b_ju_j = 0$ 
+		$\implies\sum^n_{i_1}a_iv_i = -\sum^m_{j=1}b_ju_j$
+		
+		$\because \sum^n_{i=1}a_iv_i \in W_1~,~ -\sum^m_{j=1}b_ju_j \in W_2$ and $\sum^n_{i=1}a_iv_i~,~-\sum^m_{i=1}b_iu_i \in W_1 \cap W_2$ 
+		
+		$\because W_1 \cap W_2$ $\therefore \sum^n_{i=1}a_iv_i = -\sum^m_{j=1}b_ju_j = 0$ \ \ $\because \beta_1 , \beta_2$ is linearly independent
+		
+		$\therefore a_1 = \cdots = a_n = b_1=\cdots = b_m =0$ $\therefore \beta_1 \cup \beta_2$ is linearly independent
+		
+		$\therefore \beta_1 \cup \beta_2$ is a basis of V.
+
+\end{proof}

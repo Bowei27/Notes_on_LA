@@ -1,0 +1,27 @@
+Let $A \in M_{m\times n}(F)$, $b \in M_{n\times p }(F)$ for $j = 1,\cdots , p$.
+
+Let $u_j , v_j$ be the $j$th columns of $AB$ and $B$ respectively, then 
+\begin{enumerate}
+\item $u_j = v_j$
+\item $v_j = Be_j$ where $e_j$ is the $j$th standard. vector of $F^{n}$  
+\end{enumerate}
+
+\begin{enumerate}
+\item $u_j = \begin{bmatrix}
+	(AB)_{1j} \\ \vdots \\(AB)_{mj}
+\end{bmatrix} = \begin{bmatrix}
+	\sum_{k=1}^n A_{1k}B_{kj} \\ \vdots \\\sum_{k=1}^n A_{mk}B_{kj} 
+\end{bmatrix} = A\begin{bmatrix}
+	B_{1j}\\ \vdots \\ B_{nj}
+\end{bmatrix} = Av_{j}$
+
+\item $v_j = \begin{bmatrix}
+B_{1j} \\ \vdots \\ B_{nj}
+\end{bmatrix} = \begin{bmatrix}
+	(BI)_{1j} \\ \vdots \\ (BI)_{nj}
+\end{bmatrix} = \begin{bmatrix}
+	\sum_{k=1}^p B_{1k}I_{kj}\\ \vdots \\ \sum_{k=1}^{p}B_{nk}I_{kj}
+\end{bmatrix} = B\begin{bmatrix}
+	I_{1j}\\ \vdots\\ I_{pj}
+\end{bmatrix} = Bej$
+\end{enumerate}

@@ -1,0 +1,15 @@
+\begin{proof}
+	Let $V,W$ is finite dimensional vector space, $\beta,\gamma$ be a basis of $V,W$, $T: V \rightarrow W$ is a linear transform $\implies T$ is invertible $\Leftrightarrow [T]^{\gamma}_{\beta}$ is invertible. Furthermore, $[T^{-1}]^{\beta}_{\gamma} = ([T]^{\gamma}_{\beta})^{-1} $
+	
+	$(\Rightarrow) $ Suppose $T$ is invertible $\because$ lemma of Thm 2.17, we have dim($V$) = dim($W$). Let $n = $dim($V$) $\therefore [T]^{\gamma}_{\beta} \in M_{n \times n},~ T^{-1}: W \rightarrow V$ satisfies $TT^{-1} = I_W$ and $T^{-1}T = I_V~ \because I_n = [I_V]_{\beta} = [T^{-1}T]_{\beta} = [T^{-1}]^{\beta}_{\gamma}[T]^{\gamma}_{\beta}$
+	
+	$I_n = [I_W]_{\gamma} = [TT^{-1}]_{\gamma} = [T]^{\gamma}_{\beta}[T^{-1}]^{\beta}_{\gamma}$
+	
+	$\therefore [T]^{\gamma}_{\beta}[T^{-1}]^{\beta}_{\gamma = I_n}$ and $[T^{-1}]^{\beta}_{\gamma}[T]^{\gamma}_{\beta} = I_n \implies [T]^{\gamma}_{\beta}$ is invertible and $[T^{-1}]^{\gamma}_{\beta} = ([T]^{\gamma}_{\beta})^{-1}$
+	
+	$(\Leftarrow)$ Suppose $A = [T]^{\gamma}_{\beta}$ is invertible $\implies \exists B \in M_{n \times n } \ni AB = BA = I_n ,~\because$ By Thm 2.6 $~\therefore \exists U \in \mathscr{L}(W,V) \ni U(w_j) = \sum^n_{i=1}B_{ij}v_i$ for $j = 1,\cdots,n$ where $\gamma = \{w_i ~|~ \text{for } i = 1,\cdots,n\}$ and $\beta = \{v_i ~|~ \text{for } i = 1,\cdots,n\} \therefore B = [U]^{\beta}_{\gamma}$
+	
+	Claim $U = T^{-1}$, $\because [UT]_{\beta} = [U]^{\beta}_{\gamma}[T]^{\gamma}_{\beta} = BA = I_n = [I_V]_{\beta}$
+	
+	$\therefore UT = I_V$ and $TU = I_W$ similarly $\implies U = T^{-1}$
+\end{proof}

@@ -1,0 +1,11 @@
+\begin{proof}
+	Let $V$ be a finite dimension vector space, $\beta$ be a order basis, $T:V \rightarrow V$ is a linear transform $\implies T$ is invertible $\Leftrightarrow [T]_{\beta}$ is invertible. Furtheremore, $[T^{-1}]_{\beta} = ([T]_{\beta})^{-1}$
+	
+	$(\Rightarrow)$ Suppose $T$ is invertible. Let $n = $dim(V) $\implies [T]_{\beta} \in M_{n \times n},~ T^{-1}:V \rightarrow V$ satisfies $TT^{-1} = I_V = T^{-1}T,~\because I_n = [I_V]_{\beta} = [T^{-1}T]_{\beta} = [T^{-1}]_{\beta}[T]_{\beta}$
+	
+	$I_n = [I_V]_{\beta} = [TT^{-1}]_{\beta} = [T]_{\beta}[T^{-1}]_{\beta} , ~ \therefore [T]_{\beta}[T^{-1}]_{\beta} = I_n$ and $[T^{-1}]_{\beta}[T]_{\beta} = I_n \implies [T]_{\beta}$ is invertible and $[T^{-1}]_{\beta} = ([T]_{\beta})^{-1}$
+	
+	($\Leftarrow$) Suppose $A = [T]_{\beta}$ is invertible $\therefore B \in M_{n \times n} \ni AB = BA = I_n \because$ By Thm 2.6 $\therefore \exists U \in \mathscr{L}(V) \ni U(v_j) = \sum^{n}_{i = 1} B_{ij}v_i$ for $j = 1,\cdots,n$ where $\beta = \{v_i ~|~ \text{for } i = 1,\cdots,n\} \implies [U]_{\beta} = B$
+	
+	Claim $U = T^{-1},~\because [UT]_{\beta} = [U]_{\beta}[T]_{\beta} = BA = I_n = [I_V]_{\beta} \therefore UT = I_V$ and $TU = I_V$ similarly $\implies U = T^{-1}$ 
+\end{proof}

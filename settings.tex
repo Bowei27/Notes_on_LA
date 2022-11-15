@@ -1,0 +1,103 @@
+\documentclass[12pt,reqno]{article}
+%\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath}
+\usepackage{tcolorbox}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{accents}
+\usepackage{tasks}
+%\linespread{1.2}
+%\parindent = 0pt
+%\pagestyle{fancy}
+\setlength{\parindent}{0pt}
+\everymath{\displaystyle}
+%new area
+%\usepackage[utf8]{inputenc}
+%\usepackage{CJKutf8}
+%\xeCJKsetup{AutoFakeBold=true, AutoFakeSlant=true}
+
+\usepackage{graphicx}
+
+\usepackage{natbib}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{bm}
+\usepackage{float}
+
+\usepackage{multicol}
+
+
+
+
+
+% we will modify sections, subsections and sub subsections
+\RequirePackage{titlesec}
+% Modification of section 
+\titleformat{\section}[block]{\normalsize\bfseries\filcenter}{\thesection.}{.3cm}{} 
+
+
+% modification of subsection and sub sub section
+\titleformat{\subsection}[runin]{\bfseries}{ \thesubsection.}
+{1mm}{}[.\quad]
+\titleformat{\subsubsection}[runin]{\bfseries\itshape}{ \thesubsubsection.}
+{1mm}{}[.\quad]
+
+\newenvironment{solution}
+  {\renewcommand\qedsymbol{$\blacksquare$}
+  \begin{proof}[Solution]}
+  {\end{proof}}
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+%\theoremstyle{plain}
+\newtheorem{thm}{\textbf{Theorem}}[section]
+\newtheorem{cor}{Corollary}[thm]
+\newtheorem{lmma}[thm]{Lemma}
+\newtheorem{prop}[thm]{Propersition}
+\newtheorem*{defn}{\underline{Definition}}
+\newtheorem*{ex*}{Example}
+\newtheorem*{sol*}{Solution}
+\newtheorem*{cor*}{Corollary}
+\newtheorem*{thm*}{Theorem}
+\newtheorem*{lmma*}{Lemma}
+\newtheorem*{rmk*}{Remark}
+\newtheorem*{pf*}{\underline{\textbf{Proof\ }}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\renewcommand{\P}{\mathscr{P}}
+\newcommand{\B}{\mathscr{B}}
+\newcommand{\A}{\mathscr{A}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\CC}{\mathscr{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\X}{\mathcal{X}}
+\newcommand{\T}{\mathscr{T}}
+\newcommand{\arbuni}{\bigcup_{\alpha\in I}}
+\newcommand{\finint}{\bigcap_{i=1}^n}
+\newcommand{\Ua}{{\textsc{U}_\alpha}}
+\newcommand{\Ui}{\textsc{U}_i}
+\newcommand{\pair}[2]{\left( \,#1\,,\,#2\,\right) }
+\newcommand{\dint}[2]{\int_{#1}^{#2}}
+\newcommand{\sett}[1]{\left\{ \,#1 \,\right\}}
+\newcommand{\linearcombination}[2]{#1_1#2_1+\cdots+#1_n#2_n}
+\newcommand{\slinearcombination}[1]{#1_1+\cdots+#1_n}
+\newcommand{\spann}[1]{\text{Span($#1$)}}
+\newcommand{\sub}[1]{\text{sup}}
+\newcommand{\inn}[1]{\left< #1 \right>}
+\newcommand{\kernal}[1]{Ker(#1)}
+\newcommand{\image}[1]{Im(#1)}
+\newcommand{\redd}[1]{\textbf{\color{red}#1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Lecture Notes on Linear Algebra}
+\author{CARAPAERO}
+\date{}

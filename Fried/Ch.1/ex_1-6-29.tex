@@ -1,0 +1,54 @@
+\begin{proof}$ $
+
+\begin{enumerate}
+	\item[(a).] Let $\beta= \sett{u_1,u_2,\cdots,u_k}$ is a basis of $W_1 \cap W_2$ with $\dim(W_1) = k+m$, $\dim(W_2) = k+n$ and $\dim(W_1 \cap W_2) = k$ for $k,m,n \in \N$. Since $\beta \in W_1$ and $ \beta \in W_2$ by Replacement Theorem, every linearly independent subset of $V$ can be extended to a basis for $V$.
+			
+			$\exists~\beta_1 = \sett{u_1, u_2,\cdots, u_k , v_1,v_2 , \cdots,v_m}$ is a basis of $W_1$ and $\beta_2 = \sett{u_1, u_2,\cdots,u_k,w_1,w_2,\cdots,w_n}$ is a basis of $W_2$. Let $x \in W_1 + W_2$.
+			
+			\textbf{Claim.} $Span(\sett{u_1,\cdots,u_k,v_1,\cdots,v_m,w_1,\cdots,w_n}) = W_1 + W_2$
+			
+			$x = (a_1u_1 + a_2u_2 + \cdots + a_{k+1}v_1+a_{k+2}v_2 + \cdots + a_{k+m}v_m)+(b_1u_1+b_2u_2+\cdots+b_ku_k+b_{k+1}w_{1}+b_{k+2}w_2+\cdots+b_{k+n}w_n), a_i,b_j\in\mathcal{F}$ for $i ,j=1,2,\cdots$
+			
+			$=c_1u_1 + c_2u_2 + \cdots + c_ku_k + a_{k+1}v_1 + a_{k+2}v_2+\cdots + a_{k+m}v_m + b_{k+1}w_1 + b_{k+2} + \cdots + b_{k+n}w_n, c_1,c_2,\cdots,c_k \in \mathcal{F}\implies \forall~x \in W_1 + W_2 $ 
+			
+			$\therefore W_1 + W_2 \subseteq span(\sett{u_1,\cdots,u_k,v_1,\cdots,v_m,w_1,\cdots,w_n})$
+			
+			$\because W_1 + W_2$ is a subspace, any linear combination of $W_1 + W_2$'s subset are in $W_1 + W_2$
+			
+			$\therefore span(\sett{u_1,\cdots,u_k,v_1,\cdots,v_m,w_1,\cdots,w_n}) \in W_1 + W_2$
+			
+			$\therefore span(\sett{u_1,\cdots,u_k,v_1,\cdots,v_m,w_1,\cdots,w_n}) = W_1 + W_2$
+			
+			\textbf{Claim.} $\sett{u_1,\cdots,u_k,v_1,\cdots,v_m,w_1,\cdots,w_n}$ is linearly independent
+			
+			$\sum^k_{i=1}a_iu_i + \sum^m_{i=1}b_iv_i + \sum^n_{i=1}c_iw_i = 0$
+			$\implies \sum^k_{i=1}a_iu_i + \sum^m_{i=1}b_iv_i = -\sum^n_{i=1}c_iw_i$
+			
+			$\because \sum^{k}_{i=1}a_iu_i + \sum^{m}_{i=1}b_iv_i \in W_1~,~ -\sum^n_{i=1}c_iw_i \in W_2$
+			
+			$\therefore \sum^k_{i=1}a_iu_i + \sum^m_{i=1}b_iv_i~,~-\sum^n_{i=1}c_iw_i \in W_1 \cap W_2$
+			
+			$\implies \exists~d_i \in \mathcal{F}, \sum^k_{i=1}a_iu_i + \sum^m_{i=1}b_iv_i = -\sum^n_{i=1}c_iw_i = \sum^k_{i=1}d_iu_i$
+			
+			$\because \beta_1 , \beta_2$ is linearly independent
+			$\therefore -\sum^n_{i=1}c_iw_i = \sum^k_{i=1}d_iu_i$ only for scalars are all zeros.
+			$\sum^k_{i=1}a_iu_i + \sum^m_{i=1}b_iv_i = 0$ only for scalars are all zero
+			
+			$\therefore \{u_1,\cdots,u_k,v_1,\cdots,v_m,w_1,\cdots,w_n\}$ is linearly independent
+
+			$\therefore \sett{u_1,u_2,\cdots,u_k,v_1,v_2,\cdots,v_m,w_1,w_2,\cdots,w_n}$ is a basis of $W_1 + W_2$
+			
+			
+			
+			$\therefore$ dim($W_1 + W_2$) = $k+m+n$
+			
+			dim($W_1 + W_2$) = dim($W_1$) + dim($W_2$) + dim($W_1 \cap W_2$)
+			
+			\item [(b).] $W_1 \cap W_2 = \sett{0}$
+			
+			by Exercise 1.16.29(a), if $W_1$ and $W_2$ are finite-dimensional subspace of a vector space V, dim(V) = dim($W_1$) + dim($W_2$) - dim($W_1 \cap W_2$) = dim($W_1$) + dim($W_2$) - dim($\sett{0}$) = dim($W_1$) + dim($W_2$)
+
+
+\end{enumerate} 			
+						
+	\end{proof}

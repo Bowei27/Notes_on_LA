@@ -1,0 +1,29 @@
+\begin{proof}
+	let $\beta_1 = \sett{v_1,v_2,\cdots,v_m}$ and $\dim(V) = n$.
+	By Corollary of Replacement Theorem, Every linearly independent subset of V can be extended to a basis for V then
+		$\exists~\beta = \sett{v_1,v_2,\cdots,v_m,u_1,u_2,\cdots,u_{n-m}}$ is a basis of $V$. Let $W_2 = \text{span$(\{u_1,u_2,\cdots,u_{n-m}\})$}$
+		$\because u_1,u_2,\cdots,u_{n-m} \in V,V$ is a vector space 
+		
+		by Thm 1.5, the span of any subset S of a vector space V is a subspace.
+		
+		$\therefore W_2$ is a subspace of V. Now we claim that $W_1 \cap W_2 = \{0\}$
+		
+		$\because W_1,W_2$ is a subspace of V $\therefore 0 \in W_1 , W_2$.
+		Assume $\exists~r \in V$ and $ r \in W_1~,~ r \in W_2~,~ r \neq 0$.
+		
+		$$\begin{flalign*}
+			r & =  a_1v_1 + a_2v_2 + \cdots + a_mv_m &\\
+			& =  b_1u_1 + b_2u_2 + \cdots + b_{n-m}u_{n-m} &\\
+			& =  c_1v_1 + \cdots + c_mv_m + d_1u_1 + \cdots + d_{n-m}u_{n-m}&
+		\end{flalign*}$$
+		
+		$\implies
+		\begin{cases}
+			(c_1-a_1)v_1+\cdots+(c_m-a_m)v_m+d_1u_1+\cdots+d_{n-m}u_{n-m} = 0 \\
+			c_1v_1 + \cdots + c_mv_m+(d_1-b_1)u_1 + \cdots + (d_{n-m}-b_{n-m})		
+		\end{cases}$
+		
+		$\implies c_1 = a_1,c_2=a_2,\cdots,c_m=a_m,d_1=b_1,\cdots,d_{n-m} = b_{n-m}$
+		
+		$\Rightarrow r = r+r \Rightarrow r=0 \rightarrow\leftarrow $ $\therefore W_1 \cap W_2 = \{0\}$.
+\end{proof}

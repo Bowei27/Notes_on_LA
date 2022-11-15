@@ -1,0 +1,515 @@
+\section{Linear Transformation}
+
+\section*{\S\ Linear Operator }
+
+\begin{defn}[Linear Transformation]
+	Let $V$ and $\mathrm{W}$ be vector spaces (over $\mathrm{F}$). We call a function $\mathrm{T}: \mathrm{V}  \rightarrow  \mathrm{W}$    a linear transformation from $\mathrm{V}$ to $\mathrm{W}$ if, for all x, y $\in$ $\mathrm{V}$ and c $\in$ $\mathrm{F}$, we have
+
+\begin{enumerate}
+	\item [$(a)$]   $\mathrm{T}(x + y)$ = $\mathrm{T}(x) + \mathrm{T}(y)$ 
+	\item [$(b)$]    $\mathrm{T}$($\mathrm{c}x)$ = $\mathrm{c}\mathrm{T}(x)$
+\end{enumerate} 
+\end{defn}
+
+\begin{defn}
+	Let $\mathrm{T} , \mathrm{U}: \mathrm{V} \rightarrow \mathrm{W}$ be arbitrary functions, where V and W are vector spaces over F, and let $a \in \mathrm{F}$. We define $\mathrm{T}+\mathrm{U} : \mathrm{V} \rightarrow \mathrm{W}$ \ \ by\ \ $(\mathrm{T}+\mathrm{U})(x) = \mathrm{T}(x)+\mathrm{U}(x)$\ \ for all $x \in \mathrm{V}$, and $a\mathrm{T}: \mathrm{V} \rightarrow \mathrm{W}$\ \ by\ \ $(a\mathrm{T})(x) = a\mathrm{T}(x)$\ \ for all \ \ $x \in \mathrm{V}$.
+\end{defn}
+ 
+\begin{rmk*}
+	If $F = Q$ then $(a)\Rightarrow(b)$.	
+\end{rmk*}
+
+\begin{rmk*}
+	If $T : C \rightarrow C$ be function defined by	$T(\delta)=\delta$.  $T$ is additive but not linear.
+\end{rmk*}
+
+\begin{prop}
+$ $
+	\begin{enumerate}
+		\item If $T$ is linear, then $T(0)=0$.
+		\item $T$ is linear if and only if $T(cx+y) = cT(x) + T(y)$ for all $x, y \in V$ and $c\in F$.
+		\item If $T$ is linear, then $T(x-y) = T(x) - T(y)$ for all $x, y \in V$
+		\item $T$ is linear if and only if, for $x_1, x_2, \cdots, x_n \in V$ and $a_1, a_2, \cdots, a_n \in F$, we have 
+		$$ T(\sum_{i=1}^na_ix_i) = \sum_{i=1}^na_iT(x_i). $$
+		\item For all $a\in F, aT + U$ is linear.
+		\item Using the operations of addition and scalar multiplication in the preceding definition, the collection of all linear transformations from $V$ to $W$ is a vector space over $F$.
+	\end{enumerate}
+\end{prop}
+
+\begin{defn}[Null Space, Range]
+Let $\mathrm{V}$ and $\mathrm{W}$ be vector spaces and let $\mathrm{T}: \mathrm{V}  \rightarrow  \mathrm{W}$ be linear. We define the null space(or kernel) $N(T)$ of $T$ to be the set of all vectors $x$ in $V$ such that $T(x) = 0$ ; that is , $N(T) = \{x \in V : T(x) = 0\}$. \\  We define the range(or image) $R(T)$ of $T$ to be the subset of $W$consisting of all images (under $T$) of vectors in $V$; that is, $R(T) = \{T(x):x \in V\}$
+\end{defn}
+
+\begin{rmk*}
+Let $V$ and $W$ be vector spaces, and let $I:V \rightarrow V$ and $ T_0:V \rightarrow W$ be the identity and zero transformations, respectively. Then $N(I) = \{0\}$, $R(I)=V$, $N(T_0)=V$, and $R(T_0)=\{0\}$.	
+\end{rmk*}
+
+\begin{thm}
+	Let $V$ and $W$ be vector spaces and $\mathrm{T}: \mathrm{V}  \rightarrow  \mathrm{W}$ be linear. Then $N(T)$ and $R(T)$ are subspaces of $\mathrm{V}$ and $\mathrm{W}$, respectively.
+\end{thm}
+
+\begin{proof}
+	\input{Fried/Ch.2/thm_2-1.tex}
+\end{proof}
+
+
+\begin{rmk*}
+	Give an example of distinct linear transformations $T$ and $U$ such that $N(T)=N(U)$ and $R(T)=R(U)$
+\end{rmk*}
+
+\begin{thm}
+Let V and W be vector spaces, and let $\mathrm{T} : \mathrm{V}  \rightarrow \mathrm{W}$ be linear. If $\beta = \{ v_1,v_2,\cdots,v_n \}$ is a basis for $\mathrm{V}$ , then $$ \mathrm{R}(\mathrm{T}) = \mathrm{span}(\mathrm{T}(\beta)) = \mathrm{span}(\{\mathrm{T}(v_1), \mathrm{T}(v_2), . . . , \mathrm{T}(v_n)\})$$	
+\end{thm}
+
+\begin{proof}
+	\input{Fried/Ch.2/thm_2-2.tex}
+	%\input{proof_of_theorems/thm_2-2.tex}
+\end{proof}
+
+
+\begin{ex*}
+Prove Theorem 2.2 for the case that $\beta$ is infinite, that is, $R(T) = span(\{T(v):v \in \beta\})$. 	
+\end{ex*}
+
+\begin{defn}[Nullity and Rank]  
+  Let $\mathrm{V}$ and $\mathrm{W}$ be vector spaces and let $ \mathrm{T}: \mathrm{V}  \rightarrow  \mathrm{W}$ be linear. If $N(T)$ and $R(T)$ are finite-dimensional, then we define the nullity of $T$, denoted $nullity(T)$, and the rank of $T$, denoted $rank(T)$, to be the dimensions of $N(T)$ and $R(T)$, respectively.	
+\end{defn}
+
+\begin{thm}
+	Let V and W be vector spaces,
+and let $ \mathrm{T} : \mathrm{V}  \rightarrow  \mathrm{W} $ be linear. \\ If $V$ is finite-dimensional, then
+ 
+ 
+$$	nullity(T) + rank(T) = dim(V).$$
+\end{thm}
+
+\begin{proof}
+\input{Fried/Ch.2/thm_2-3.tex}
+	%\input{proof_of_theorems/thm_2-3.tex}
+\end{proof}
+
+\begin{thm}
+	Let $V$ and $W$ be vector spaces, and let $ T: V  \rightarrow  W$ be
+linear. Then $T$ is one-to-one if and only if $N(T) = \{0\}$.
+\end{thm}
+
+\begin{proof}
+	\input{Fried/Ch.2/thm_2-4.tex}
+	%\input{proof_of_theorems/thm_2-4.tex}
+\end{proof}
+
+%\input{proof_of_theorems/thm_2-5.tex}
+%\input{proof_of_theorems/thm_2-6.tex}
+
+\begin{prop}
+	Let $V$ and $W$ be finite-dimensional vector spaces and $T:V \rightarrow W$ be linear.
+	\begin{enumerate}
+		\item [(a)]Prove that if $\dim(V) < \dim(W)$, then $T$ cannot be onto.
+		\item [(b)]Prove that if $\dim(V) > \dim(W)$, then $T$ cannot be one-to-one.
+	\end{enumerate}
+\end{prop}
+
+\begin{defn}[Invertible]
+	Let $V$ and $W$ be vector spaces, and let $\mathrm{T} : \mathrm{V} \rightarrow \mathrm{W}$ be linear. A function $\mathrm{U} : \mathrm{W} \rightarrow \mathrm{V}$ is said to be an inverse of $T$ if $\mathrm{T} \mathrm{U} = \mathrm{I}_\mathrm{W}$ and $\mathrm{U} \mathrm{T} = \mathrm{I}_\mathrm{V}$. If $T$ has an inverse, then $T$ is said to be invertible. As noted in Appendix $B$, if $T$ is invertible, then the inverse of $T$ is unique and is denoted by $\mathrm{T}^{-1}$.
+\end{defn}
+
+\begin{prop}
+\ \	\begin{enumerate}
+		\item$(TU)^{-1}=U^{-1}T^{-1}$.
+		\item$(T^{-1})^{-1}=T$; in particular, $T^{-1}$ is invertible.
+	\end{enumerate}
+\end{prop}
+
+\begin{defn}
+Let $A$ be an n $\times$ n matrix. Then $A$ is invertible if there exists an n $\times$ n matrix $B$ such that $AB = BA = I$.
+\\If $A$ is invertible, then the matrix $B$ such that $AB = BA = I$ is unique. (If $C$ were another such matrix, then $C = CI = C(AB) = (CA)B = IB = B$.) The matrix $B$ is called the inverse of $A$ and is denoted by $\mathrm{A}^{-1}$.
+	
+\end{defn}
+
+\begin{defn}[Isomorphism]
+Let $V$ and $W$ be vector spaces. We say that $V$ is isomorphic to $W$ if there exists a linear transformation $\mathrm{T} : \mathrm{V} \rightarrow \mathrm{W}$ that is invertible. Such a linear transformation is called an isomorphism from $V$ onto $W$.	
+\end{defn}
+\begin{cor}
+Let $\sim$ mean "is isomorphic to." Prove that $\sim$ is an equivalence relation on the class of vector spaces over $F$.
+\end{cor}
+
+
+\begin{thm}
+Let $V$ and $W$ be finite-dimensional vector spaces (over the same field). Then $V$ is isomorphic to $W$ if and only if $\dim(\mathrm{V}) = \dim(\mathrm{W})$.	
+\end{thm}
+
+\begin{cor}
+	Let V be a vector space over $F$. Then $V$ is isomorphic to $F^n$ if and only if $\dim(V)=n$.
+\end{cor}
+ 
+\begin{rmk*}
+The Linearity and Finite-dimensional is essential arguement.	
+\end{rmk*}
+
+\begin{ex*}
+	Recall the definition of $P(R)$ on page 10. Define $$T:P(R)\rightarrow P(R) \ \ by \ \ T(f(x))=\int^x_0f(t)dt.$$
+	Prove that $T$ linear and one-to-one, but not onto. 
+\end{ex*}
+
+\begin{ex*}
+Let $T:P(R)\rightarrow P(R)$ be defined by $T(f(x))=f'(x).$ Recall that $T$ is linear. Prove that T is onto, but not one-to-one.	
+\end{ex*}
+
+\begin{ex*}
+Let $V$ be the vector space of sequences described in Example 5 of Section 1.2. Define the functions $T,U:V \rightarrow V$ by $$T(a_1,a_2,\cdots)=(a_2,a_3,\cdots) \ \ and \ \ U(a_1,a_2,\cdots)=(0,a_1,a_2,\cdots). $$
+$T$ and $U$ are called the left shift and right shift operators on $V$, respectively.
+\begin{enumerate}
+	\item [(a)]Prove that $T$ and $U$ are linear.
+	\item [(b)]Prove that $T$ is onto, but not one-to-one.
+	\item [(c)]Prove that $U$ is one-to-one, but not onto.
+\end{enumerate}	
+\end{ex*}
+
+\begin{thm}
+	Let $V$ and $W$ be vector spaces, and suppose that $V$ has a finite basis $\{v_1,v_2,\cdots,v_n\}.$ If $U,T:V \rightarrow W$ are linear and $U(v_i)=T(v_i)$ for $i=1,2,\cdots,n$ then $U=T.$
+\end{thm}
+
+\begin{proof}
+	\input{Fried/Ch.2/thm_2-6_cor.tex}
+\end{proof}
+
+%\input{proof_of_theorems/thm_2-7.tex}
+
+\begin{prop}
+	Let $V$ and $W$ be vector spaces and $T:V \rightarrow W$ be linear.
+	\begin{enumerate}
+		\item [(a)]Prove that $T$ is one-to-one if and only if $T$ carries linearly independent subsets of $V$ onto linearly independent subsets of $W.$
+		\item [(b)]Suppose that $T$ is one-to-one and that $S$ is a subset of $V.$ Prove that $S$ is linearly independent if and only if $T(S)$ is linearly independent.
+		\item [(c)]Suppose $\beta = \{v_1,v_2,\cdots,v_n\}$ is a basis for $V$ and $T$ is one-to-one and onto. Prove that $T(\beta)=\{T(v_1),T(v_2),\cdots,T(v_n)\}$ is a basis for $W.$
+\end{enumerate}
+\end{prop}
+
+\section*{\S\ Matrix Representation }
+\begin{defn}
+	Let $V$ be a finite-dimensional vector space. An ordered basis for $V$ is a basis for $V$ endowed with a specific order; that is, an ordered basis for $V$ is a finite sequence of linearly independent vectors in $V$ that generates $V$.
+\end{defn}
+
+\begin{defn}
+	Let $\beta = \{ u_1,u_2,\cdots,u_n \}$ be an ordered basis for a finite- dimensional vector space $V$. For $x \in V$, let $a_1,a_2,\cdots,a_n $, be the unique scalars such that $$x = \sum_{i=1}^{\mathrm{n}} a_iu_i$$ We define the coordinate vector of $x$ relative to $\beta$, denoted $\lbrack x \rbrack_\beta$, by
+
+	 $$\lbrack x \rbrack_\beta = \left[\begin{matrix}
+	a_1 \\
+	a_2 \\
+	\vdots \\
+	a_n 	
+\end{matrix}\right]$$
+\end{defn}
+
+\begin{rmk*}
+Let $V$ be an n-dimensional	vector space with an ordered basis $\beta.$ Define $T:V \rightarrow F^n$ by $T(x)=[x]_\beta.$ Prove that $T$ is linear.
+\end{rmk*}
+
+\begin{defn}
+	Using the notation above, we call the $\mathrm{m} \times \mathrm{n}$ matrix $A$ defined by $\mathrm{A}_{ij} = \mathrm{a}_{ij}$ the matrix representation of T in the ordered bases $\beta$ and $\gamma$ and write $\mathrm{A} = \lbrack \mathrm{T} \rbrack^\gamma_\beta$. If $\mathrm{V} = \mathrm{W}$ and $\beta = \gamma$, then we write $\mathrm{A} = \lbrack \mathrm{T}\rbrack_\beta$. \\
+Notice that the jth column of A is simply $\lbrack \mathrm{T} (v_j)\rbrack_\gamma$. Also observe that if
+$\mathrm{U} : \mathrm{V} \rightarrow \mathrm{W}$ is a linear transformation such that $\lbrack \mathrm{U} \rbrack^\gamma_\beta = [\mathrm{T}]^\gamma_\beta$, then $\mathrm{U} = \mathrm{T}$ by the corollary to Theorem 2.6 (p. 73).
+\end{defn}
+
+\begin{thm}%2-8
+	Let V and W be finite-dimensional vector spaces with ordered bases $\beta$ and $\gamma$, respectively, and let $\mathrm{T} , \mathrm{U}: \mathrm{V} \rightarrow \mathrm{W}$ be linear transformations. Then
+\begin{enumerate}
+	\item[(a)] $[\mathrm{T} + \mathrm{U}]^\gamma_\beta = [\mathrm{T}]^\gamma_\beta + [\mathrm{U}]^\gamma_\beta$ and
+	\item[(b)] $[a\mathrm{T}]^\gamma_\beta = a[\mathrm{T}]^\gamma_\beta$ for all scalars $a$.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+	\input{Fried/Ch.2/thm_2-8.tex}
+\end{proof}
+
+\begin{thm}%2-9
+	Let $V$, $W$, and $Z$ be vector spaces over the same field $F$, and let $\mathrm{T} : \mathrm{V} \rightarrow \mathrm{W}$ and $\mathrm{U} : \mathrm{W} \rightarrow \mathrm{Z}$ be linear. Then $\mathrm{U}\mathrm{T} : \mathrm{V} \rightarrow \mathrm{Z} $ is linear.
+\end{thm}
+
+\begin{proof}
+	\input{Fried/Ch.2/thm_2-9.tex}
+\end{proof}
+
+\begin{thm}%2-10
+	Let $V$ be a vector space. Let $T$, $\mathrm{U}_1$, $\mathrm{U}_2 \in L(V)$. Then 
+	\begin{enumerate}
+		\item [(a)] $\mathrm{T}(\mathrm{U}_1+\mathrm{U}_2) = \mathrm{T}\mathrm{U}_1 + \mathrm{T}\mathrm{U}_2$ and $(\mathrm{U}_1 + \mathrm{U}_2)\mathrm{T}$ = $\mathrm{U}_1\mathrm{T} + \mathrm{U}_2\mathrm{T}$
+		\item [(b)] $\mathrm{T}(\mathrm{U}_1\mathrm{U}_2) = (\mathrm{T}\mathrm{U}_1)\mathrm{U}_2$
+		\item [(c)] $TI = IT = T$
+		\item [(d)] $a(\mathrm{U}_1\mathrm{U}_2) = (a\mathrm{U}_1)\mathrm{U}_2 = \mathrm{U}_1(a\mathrm{U}_2)$ for all scalars $a$.
+	\end{enumerate}
+\end{thm}
+
+\begin{proof}
+	\input{Fried/Ch.2/thm_2-10.tex}
+\end{proof}
+
+\begin{defn}[The Product Of Two Matrices]
+Let A be an $m \times n$ matrix and $B$ be an $n \times p$ matrix. We define the product of $A$ and $B$, denoted $AB$, to be the m $\times$ p matrix such that 
+	$$(AB)_{ij}  = \sum_{k=1}^{\mathrm{n}} A_{ik}B_{kj}\ \ for \ \ 1 \leq i \leq m,\ \ 1 \leq j \leq p.$$
+\end{defn}
+
+\begin{thm}%2-11
+	Let $V$, $W$, and $Z$ be finite-dimensional vector spaces with ordered bases $\alpha , \beta$, and  $\gamma$, respectively. Let $\mathrm{T}: \mathrm{V} \rightarrow \mathrm{w}$ and $\mathrm{U}: \mathrm{W} \rightarrow \mathrm{Z}$ be linear transformations. Then
+$$[\mathrm{U}\mathrm{T}]^\gamma_\alpha = [\mathrm{U}]^\gamma_\beta[\mathrm{T}]^\beta_\alpha$$.
+\end{thm}
+
+\begin{proof}
+	\input{Fried/Ch.2/thm_2-11.tex}
+\end{proof}
+
+\begin{cor}%2-11 cor
+	Let $V$ be a finite-dimensional vector space with an ordered basis $\beta$. Let $\mathrm{T}, \mathrm{U} \in L(V)$. Then $[\mathrm{U}\mathrm{T}]_\beta = [\mathrm{U}]_\beta [\mathrm{T}]_\beta$.
+\end{cor}
+
+\begin{proof}
+	\input{Fried/Ch.2/thm_2-11_cor.tex}
+\end{proof}
+
+\begin{defn}
+We define the Kronecker delta $\delta_{ij}$ by $\delta_{ij} = 1$ if $i = j$ and $\delta_{ij} = 0$ if $i \neq j$. The $n \times n$ identity matrix In is defined by $(I_n)_{ij} = \delta_{ij}$.
+Thus, for example,
+$$I_1 = \left[\begin{matrix}
+	1	
+\end{matrix}\right]
+I_2 = \left[\begin{matrix}
+	1 & 0\\  
+	0 & 1 \\	
+\end{matrix}\right] and \ \  
+I_3 = \left[\begin{matrix}
+	1 & 0 & 0 \\
+	0 & 1 & 0 \\
+	0 & 0 & 1 \\ 	
+\end{matrix}\right]$$
+\end{defn}
+
+\begin{thm}%2-12
+ Let $A$ be an $m \times n$ matrix, $B$ and $C$ be $ n\times p$ matrices, and $D$ and $E$ be $q \times m$ matrices. Then
+ 
+ \begin{enumerate}
+ 	\item [(a)]A(B+C) = AB + AC and (D+E)A = DA + EA.
+ 	\item [(b)]$a$(AB) = ($a$A)B = A($a$B) for any scalar $a$.
+ 	\item [(c)]$\mathrm{I}_mA = A = A\mathrm{I}_n$.
+ 	\item [(d)]If V is an n-dimensional vector space with an ordered basis $\beta$, then $[I_V]_\beta = I_n$.
+ \end{enumerate}	
+\end{thm}
+
+\textbf{\color{red}not input now}
+
+\begin{cor}%2-12 cor
+	Let $A$ be an $m \times n$ matrix, $B_1,B_2,\cdots,B_k$ be $n \times p$ matrices, $C_1,C_2,\cdots,C_k$ be $q \times m$ matrices, and $a_1,a_2,\cdots,a_k$ be scalars. Then $$A(\sum^k_{i=1}a_iB_i)=\sum^k_{i=1}a_iAB_i$$ \\ and $$(\sum^k_{i=1}a_iC_i)A=\sum^k_{i=1}a_iC_iA.$$
+\end{cor}
+
+\textbf{\color{red}not input now}
+
+With this notation, we see that if $$A=\left[\begin{matrix}
+	0 & 0 \\
+	1 & 0 	
+\end{matrix}\right]$$
+then $A^2=O$ (the zero matrix) even though $A \neq O.$ Thus the cancellation property for multiplication in fields is not valid for matrices. To see why, assume that the cancellation law is valid. Then, from $A \cdot A = A^2 = O = A \cdot O$, we would conclude that $A=O$, which is false.
+
+\begin{thm}%2-13
+	Let $A$ be an $m \times n$ matrix and $B$ be an $n \times p$ matrix. For each $ j (1 \leq j \leq p)$ let $u_j$ and $v_j$ denote the jth columns of $AB$ and $B$, respectively. Then
+\begin{enumerate}
+	\item [(a)] $u_j = Av_j$
+	\item [(b)] $v_j = Be_j$, where $e_j$ is the jth standard vector of $\mathrm{F}^p$.
+ \end{enumerate}
+\end{thm} 
+
+\begin{proof}
+	\input{Fried/Ch.2/thm_2-13.tex}
+\end{proof}
+
+\begin{thm} %Ex 2.3.14
+Assume the notation in Theorem 2.13.
+	\begin{enumerate} 
+		\item [(a)]Suppose that $z$ is a (column) vector in $F^p$. Use Theorem 2.13(b) to prove that $B_z$ is a linear combination of the columns of $B$. In particular, if $z=(a_1,a_2,\cdots,a_p)^t$, then show that $$Bz=\sum^p_{j=1}a_jv_j.$$
+		\item [(b)]Extend (a) to prove that column $j$ of $AB$ is a linear combination of the columns of $A$ with the coefficients in the linear combination being the entries of column $j$ of $B.$
+		\item [(c)]For any row vector $w \in F^m$, prove that $wA$ is a linear combination of the rows of $A$ with the coefficients in the linear combination being the coordinates of w. Hint: Use properties of the transpose operation applied to (a).
+		\item [(d)]Prove the analogous result to (b) about rows: Row $i$ of $AB$ is a linear combination of the rows of $B$ with the coefficients in the linear combination being the entries of row $i$ of $A$.
+	\end{enumerate}
+\end{thm}
+
+\input{Fried/Ch.2/ex_2-3-14.tex}
+
+
+\begin{thm}%2-14
+	Let $V$ and $W$ be finite-dimensional vector spaces having ordered bases $\beta$ and $\gamma$, respectively, and let $\mathrm{T} : \mathrm{V} \rightarrow \mathrm{W}$ be linear. Then, for each $u \in \mathrm{V}$, we have
+		$$[\mathrm{T}(u)]_\gamma = [\mathrm{T}]^\gamma_\beta[u]_\beta$$.
+	
+\end{thm}
+
+\begin{proof}
+	\input{Fried/Ch.2/thm_2-14.tex}
+\end{proof}
+
+\begin{defn}
+Let $A$ be an $m \times n$ matrix with entries from a field $F$ . We denote by $L_A$ the mapping $L_A : \mathrm{F}^n \rightarrow \mathrm{F}^m$ defined by $L_A(x) = Ax$ (the matrix product of $A$ and $x$) for each column vector $x \in \mathrm{F}^n$. We call $L_A$ a left-multiplication transformation.	
+\end{defn}
+
+\begin{thm}%2-15
+The characteristics of Left-Multiplication Transformation $ $\\
+	Let $A$ be an $m \times n$ matrix with entries from $F$ . Then the left-multiplication transformation $\mathrm{L}_A : \mathrm{F}^n \rightarrow \mathrm{F}^m$ is linear. Furthermore, if $B$ is any other $m \times n$ matrix (with entries from $F$) and $\beta$ and $\gamma$ are the standard ordered bases for $\mathrm{F}^n$ and $\mathrm{F}^m$, respectively, then we have the following properties.
+	\begin{enumerate}
+		\item [(a)] $[\mathrm{L}_A]^\gamma_\beta = A$.
+		\item [(b)] $\mathrm{L}_A = \mathrm{L}_B$ if and only if $A = B$.
+		\item [(c)] $\mathrm{L}_{A+B} = \mathrm{L}_A + \mathrm{L}_B$ and $\mathrm{L}_{aA} = a\mathrm{L}_A$ for all $a \in F$.
+		\item [(d)]  If $\mathrm{T} : F^n \rightarrow F^m$ is linear, then there exists a unique m $\times$ n matrix C such
+that $\mathrm{T} = \mathrm{L}_C$. In fact, $C = [\mathrm{T}]^\gamma_\beta$.
+		\item [(e)] If $E$ is an $n \times p$ matrix, then $\mathrm{L}_{AE} = \mathrm{L}_A\mathrm{L}_E$.
+		\item [(f)] If $m = n L$, then $\mathrm{L}_{I_n} =\mathrm{I}_{F^n}$.
+	\end{enumerate}	
+\end{thm}
+
+\begin{proof}
+	\input{Fried/Ch.2/thm_2-15.tex}
+\end{proof}
+
+\begin{cor}%2-15 cor1
+Let $V$ be a finite-dimensional vector space with an ordered basis $\beta$, and let $\mathrm{T} : \mathrm{V} \rightarrow \mathrm{V}$ be linear. Then $T$ is invertible if and only if $[\mathrm{T}]_\beta$ is invertible. Furthermore, $[\mathrm{T}^{-1}]_\beta = ([\mathrm{T}]_\beta)^{-1}$
+\end{cor}
+
+\begin{proof}
+	\input{Fried/Ch.2/thm_2-15_cor1.tex}
+\end{proof}
+
+\begin{cor}%2-15 cor2
+	Let $A$ be an $n \times n$ matrix. Then $A$ is invertible if and only if $\mathrm{L}_A$ is invertible. Furthermore, $(\mathrm{L_A})^{-1} = \mathrm{L}_{A^{-1}}$
+\end{cor}
+\begin{proof}
+	\textbf{\color{red}not now}
+	%\input{Fried/Ch.2/thm_2-15_cor2.tex}
+\end{proof}
+
+\begin{thm}%2-16
+	Let $A$,$B$, and $C$ be matrices such that $A(BC)$ is defined. Then $(AB)C$ is also defined and $A(BC) = (AB)C$ ; that is, matrix multiplication is associative.
+\end{thm}
+
+
+\input{Fried/Ch.2/thm_2-16.tex}
+
+\begin{lmma*}%2-17 lemma
+	Let $T$ be an invertible linear transformation from $V$
+ to $W$. Then $V$ is finite-dimensional if and only if $W$ is finite-dimensional. In this case, $\dim(v)=\dim(W).$
+ \end{lmma*}
+ 
+ \input{Fried/Ch.2/thm_2-17_lmma.tex}
+ 
+ \begin{thm}%2-18
+ Let $V$ and $W$ be finite-dimensional vector spaces with ordered bases $\beta$ and $\gamma$, respectively. Let $\mathrm{T} : \mathrm{V} \rightarrow \mathrm{W}$ be linear. Then $T$ is invertible if and only if $[\mathrm{T}]^\gamma_\beta$ is invertible. Furthermore, $[\mathrm{T}^{-1}]^\beta_\gamma = ([\mathrm{T}^\gamma_\beta])^{-1}$.	
+ \end{thm}
+ 
+ \input{Fried/Ch.2/thm_2-18.tex}
+ 
+ \begin{thm}%2-22
+ 	Let $\beta$ and $\beta'$ be two ordered bases for a finite-dimensional vector space $V$, and let $Q=\left[\begin{matrix}
+ 		I_V
+ 	\end{matrix}\right]^\beta_{\beta'}$. Then 
+ 	\begin{enumerate}
+ 		\item [(a)]$Q$ is invertible.
+ 		\item [(b)]For any $v \in V$, $[v]_\beta=Q[v]_{\beta'}$.
+ 	\end{enumerate}
+ \end{thm}
+ 
+ \input{Fried/Ch.2/thm_2-22.tex}
+
+\begin{thm}%2-23
+	Let $T$ be a linear operator on a finite-dimensional vector space $V$, and let $\beta$ and $\beta'$ be ordered bases for $V$. Suppose that $Q$ is the change of coordinate matrix that changes $\beta'$-coordinates into $\beta$-coordinates. Then $$[T]_{\beta'}=Q^{-1}[T]_\beta Q.$$
+\end{thm}
+
+\input{Fried/Ch.2/thm_2-23.tex}
+
+\begin{cor}%2-23 cor
+	Let $A\in M_{n \times n}(F)$, and let $\gamma$ be an ordered basis for $F^n$. Then $[L_A]=Q^{-1}AQ$, where $Q$ is the $n \times n$ matrix whose $j$th column is the $j$th vector of $\gamma.ß$
+\end{cor}
+
+\input{Fried/Ch.2/thm_2-23_cor.tex}
+
+\begin{defn}
+	Let $A$ and $B$ be matrices in $M_{n \times n}(\mathrm{F})$. We say that $B$ is similar to $A$ if there exists an invertible matrix $Q$ such that $B = Q^{-1}AQ$.
+\end{defn}
+
+\begin{thm}% ex 2.5 9
+	"is similar to" is an equivalence relation on $M_{n \times n}(\mathrm{F})$
+\end{thm}
+
+\input{Fried/Ch.2/ex_2-5-9.tex}
+
+
+\begin{prop}% ex 2.5 10
+	If $A$ and $B$ are similar $n \times n$ matrices, then tr($A$) = tr($B$).
+ \end{prop}
+ 
+ \input{Fried/Ch.2/ex_2-5-10.tex}
+ 
+
+\begin{defn}
+	Let $V$ and $W$ be vector space over $\mathrm{F}$. We denote the vector space of all linear transformations from $V$ into $W$ by $\mathscr{L}(V,W)$. In the case that $V = W$, we write $\mathscr{L}(V)$ instead of $\mathscr{L}(V,W)$
+\end{defn}
+
+\begin{thm}% 2.20
+	Let $V$ and $W$ be finite-dimensional vector spaces over $\mathrm{F}$ of dimensions $n$ and $m$, respectively, and let $\beta$ and $\gamma$ be ordered bases for $V$ and $W$, respectively. Then function $\Phi: \mathscr{L}(V,W) \rightarrow M_{m \times n}(\mathrm{F}),$ defined by $\Phi(T) = [T]^{\gamma}_{\beta}$ for $T \in \mathscr{L}(V,W),$ is an isomorphism.
+\end{thm}
+
+\begin{cor}
+	Let $V$ and $W$ be finite-dimensional vector spaces of dimensions $n$ and $m$, respectively. Then $\mathscr{L}(V,W)$ is finite-dimensional of dimension $mn$.
+\end{cor}
+
+\begin{lmma}% ex 2.4 15
+	Let $V$ and $W$ be finite-dimensional vector spaces, and let $T:V \rightarrow W$ be a linear transformation. Suppose that $\beta$ is a basis for $V$. Then $T$ is an isomorphism if and only if $T(\beta)$ is a basis for $W$.
+\end{lmma}
+
+\input{Fried/Ch.2/ex_2-4-15.tex}
+
+
+\begin{thm}% ex 2.4 21
+	Let $V$ and $W$ be finite-dimensional vector spaces with ordered bases $\beta = \{v_1,v_2,\cdots,v_n\}$ and $\gamma = \{w_1,w_2,\cdots,w_m\}$, respectively. By Thm 2.6, there exist linear transformations $T_{ij}: V \rightarrow W$ such that 
+	
+	$$T_{ij}(v_k) = \begin{cases} 
+	w_i \text{ if} k = j\\
+	0 \text{ if} k \neq j
+	\end{cases}$$
+	
+	First prove that $\{T_{ij}~|~ 1 \leq i \leq m,~1 \leq j \leq n\}$ is a basis for $\mathscr{L}(V,W)$. Then let $M^{ij}$ be the $m \times n$ matrix with $1$ in the $i$th row and $j$th column and $0$ elsewhere, and prove that $[T_{ij}]^{\gamma}_{\beta} = M^{ij}$. Again by Thm 2.6, there exists a linear transformation $\Phi : \mathscr{L}(V,W) \rightarrow M_{m \times n}(\mathrm{F})$ such that $\Phi(T_{ij}) = M^{ij}$. Prove that $\Phi$ is an isomorphism.
+\end{thm}
+
+\input{Fried/Ch.2/ex_2-4-21.tex}
+
+
+\begin{defn}
+	Let $\beta$ be an ordered basis for an $n$-dimensional vector space $V$ over the field $\mathrm{F}$. The standard representation of $V$ with respect to $\beta$ is the function $\phi_{\beta}:V \rightarrow \mathrm{F}^n$ defined by $\phi_{\beta}(x) = [x]_{\beta}$ for each $x \in V$.
+\end{defn}
+
+\begin{thm}% 2.1
+	Let $V$ and $W$ be vector spaces and $T:V \rightarrow W$ be linear. Then $N(T)$ and $R(T)$ are subspace of $V$ and $W$, respectively.
+\end{thm}
+
+%figure here
+
+\begin{center}
+		\includegraphics[scale = 0.25]{./figure/105.jpg}
+\end{center}
+
+
+
+Let $V$ and $W$ be vector spaces of dimension $n$ and $m$, respectively, and let $T: V \rightarrow W$ be a linear transformation. Define $A = [T]^{\gamma}_{\beta}$, where $\beta$ and $\gamma$ are arbitrary ordered bases of $V$ and $W$, respectively. We are now able to use $\phi_{\beta}$ and $\phi \gamma$ to study the relationship between the linear transformations $T$ and $L_A : \mathrm{F}^n \rightarrow \mathrm{F}^m$.
+Let us first consider figure above. Notice that there are two composites of linear transformations that map $V$ into $\mathrm{F}^m$:
+
+\begin{enumerate}
+	\item Map $V$ into $\mathrm{F}^n$ with $\phi_{\beta}$ and follow this transformation with $L_A$; this yields the composite $L_A\phi_{\beta}$.
+	\item Map $V$ into $W$ with $T$ and follow it by $\phi_{\gamma}$ to obtain the composite $\phi_{\gamma}T$.
+\end{enumerate}
+
+These two composites are depicted by the dashed arrows in the diagram.
+By a simple reformulation of Theorem 2.14 (p. 91), we may conclude that
+
+$$L_A\phi_{\beta} = \phi_{\gamma}T$$
+
+
+that is, the diagram "commutes." Heuristically, this relationship indicates that after $V$ and $W$ are identified with $\mathrm{F}^n$ and $\mathrm{F}^m$ via $\phi_{\beta}$ and $\phi_{\gamma}$, respectively, we may "identify" $T$ with $L_A$. This diagram allows us to transfer operations on abstract vector spaces to ones on $\mathrm{F}^n$ and $\mathrm{F}^m$.
+
+\begin{thm}% ex 2.4 20
+	Let $T:V \rightarrow W$ be a linear transformation from an $n$-dimensional vector space $V$ to an $m$-dimensional vector space $W$. Let $\beta$ and $\gamma$ be ordered bases for $V$ and $W$, respectively. Prove that rank$(T) = $ rank$(L_A)$ and that nullity$(T) = $ nullity($L_A$), where $A = [T]^{\gamma}_{\beta}$.
+\end{thm}
+
+\input{Fried/Ch.2/ex_2-4-20.tex}

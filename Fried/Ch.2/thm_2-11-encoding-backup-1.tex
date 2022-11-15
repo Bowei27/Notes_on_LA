@@ -1,0 +1,11 @@
+Let $\alpha = \left\{v_i\ |\ i = 1\cdots n\right\}$, $\beta = \left\{w_j\ |\ j = 1\cdots m\right\}$, $\gamma = \left\{z_k\ |\ k = 1\cdots p\right\}$
+ $\implies \exists!a_{ij}, b_{ki} \in F$ for $j = 1, \cdots,m \quad  i = 1,\cdots n \quad $ and $k = 1,\cdots , p$ such that 
+
+	$$T(v_i ) = \sum_{i =1}^m a_{ij}wj  \quad U(w_j) = \sum_{k=1}^p b_{kj}z_k $$
+	
+\begin{flalign*}	
+	UT\left(v_{i}\right) & = U\left(T\left(v_{i}\right)\right) = U\left(\sum_{j=1}^{m} a_{ij} w_{j}\right)=
+	\sum_{j=1}^{m} a_{ij} U\left(w_{j}\right)=\sum_{j=1}^{m} a_{j i}\left(\sum_{k=1}^{p} b_{k j} z_{k}\right)\\&=\sum_{k=1}^{p} \sum_{j=1}^{m} b_{k j} a_{j i} z_{k} \quad \text{for} \quad i= 1, \cdots n & \\
+	&\implies\left([U T]_{\alpha}^{\alpha}\right)_{i j}=\sum_{k=1}^{p} \sum_{j=1}^{m} b_{k j} a_{j i}=\left([U]_{\beta}^{\alpha}[T]_{\alpha}^{\beta}\right)_{i j} \implies [U T]_{\alpha}^{\alpha}=[U]_{\beta}^{\alpha}[T]_{\alpha}^{\beta} &
+\end{flalign*}
+	

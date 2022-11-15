@@ -1,0 +1,13 @@
+\begin{proof}
+	Let $V,W$ be finite dimensional vector space of dimension $n,m$ respectivily. Let $\beta, \gamma$ be a order basis of $V,W$ respectively. $\implies \Phi: \mathscr{L}(V,W) \rightarrow M_{m \times n}(\mathrm(F))$, defined by $\Phi (T) = [T]^{\gamma}_{\beta}$ for $T \in \mathscr{L}(V,W)$ is an isomorphism. $\because$ By Thm 2.8 $\therefore$ Let $T,U \in \mathscr{L}(V,W)$ and $\alpha $ be a scalar
+	
+	$$\Phi (\alpha T + U) = [\alpha T + U]^{\gamma}_{\beta} = \alpha [T]^{\gamma}_{\beta} + [U]^{\gamma}_{\beta} = \alpha \Phi (T) + \Phi (U)$$
+	
+	$\implies \Phi$ is linear
+	
+	Cliam $\Phi$ is one-to-one and onto $\Leftrightarrow \forall A \in M_{m \times n},~ \exists ! T:V\rightarrow W$ is linear $\ni \Phi(T) = A$
+	
+	Let $\beta = \{v_i \text{for } i = 1,\cdots,n\},~\gamma = \{w_i ~|~ \text{for } i = 1,\cdots,m\}$. Given $A \in M_{m \times n}$
+	
+	$\because$ By Thm 2.6 $\therefore \exists ! T: V \rightarrow W$ is linear $\ni T(v_j) = \sum^{m}_{i=1}a_{ij}w_i$ for $j = 1,\cdots,n$ that is $[T]^{\gamma}_{\beta} = A \Leftrightarrow \Phi(T) = A \implies \Phi$ is an isomorphism
+\end{proof}

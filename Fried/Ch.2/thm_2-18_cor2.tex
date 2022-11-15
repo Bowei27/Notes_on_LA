@@ -1,0 +1,9 @@
+\begin{proof}
+	Let $A \in M_{n \times m} \implies A$ is invertible $\Leftrightarrow L_A$ is invertible. Furthermore, $(L_A)^{-1} = L_{A^{-1}}$
+	
+	$(\Rightarrow)$ Suppose $A$ is invertible $\therefore \exists A^{-1} \in M_{n \times n} \ni AA^{-1} = A^{-1}A = I_n \therefore I_{\mathrm{F}^n} = L_{I_n} = L_{AA^{-1}} = L_AL_{A^{-1}},~ I_{\mathrm{F}^n} = L_{I_n} = L_{A^{-1}A} = L_{A^{-1}}L_A \therefore L_AL_{A^{-1}} = I_{\mathrm{F}^n}$ and $L_{A^{-1}}L_{A} = I_{\mathrm{F}^n} \implies L_A$ is invertible and $(L_A)^{-1} = L_{A^{-1}}$
+
+	$(\Leftarrow)$ Suppose $L_A$ is invertible, $(L_A)^{-1}$ satisfies $L_A(L_A)^{-1} = (L_A)^{-1}L_{A} = I_{\mathrm{F}^n}$.Let $\beta = \{v_i ~|~ \text{for }i = 1,\cdots,n \}$ be a basis of $\mathrm{F}^n \because I_n = [I_{\mathrm{F}^n}]_{\beta} = [L_A(L_A)^{-1}]_{\beta} = [L_A]_{\beta}[(L_A)^{-1}]_{\beta} = A[(L_A)^{-1}]_{\beta}$
+	
+	$I_n = [I_{\mathrm{F}^n}]_{\beta} = [(L_A)^{-1}L_A]_{\beta} = [(L_A)^{-1}]_{\beta}[L_A]_{\beta} = [(L_A)^{-1}]_{}\beta A ,~ \therefore A[(L_A)^{-1}]_{\beta} = I_n$ and $[(L_A)^{-1}]_{\beta}A = I_n \implies A$ is invertible and $A^{-1} = [(L_A)^{-1}]_{\beta} \Leftrightarrow L_{A^{-1}} = (L_A)^{-1}$
+\end{proof}

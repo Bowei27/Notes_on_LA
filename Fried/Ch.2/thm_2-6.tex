@@ -1,0 +1,17 @@
+Let $x \in V$ \\
+$x = \sum^n_{i=1}a_iv_i$ where $a_i$ are unique scalars. \\
+Def: $T:V \rightarrow W$ by $T(x)=\sum^n_{i=1}a_iw_i$ \\
+\begin{enumerate}
+	\item Claim $T$ is linear \\
+	Suppose $u, v \in V ,\ \ d \in F$ \\
+	we can write $u =  \sum^n_{i=1}b_iv_i$ and $v=\sum^n_{i=1}c_iv_i$ \\
+	for some $b_i, c_i$ for $i=1,\cdots,n$ are scalars. Thus, $du + v = \sum^n_{i=1}(db_i+c)v_i$ \\
+	$T(du+V) = \sum^n_{i=1}(db_i+c_i)w_i = d\sum^n_{i=1}b_iw_i + \sum^n_{i=1}c_iw_i = dT(u) + T(v)$ \\
+	$\implies T$ is linear.
+	\item Claim: $T(v_i)=w_i$ \\
+	Clearly: $T(v_i)=w_i$ for $i=1,\cdots,n$
+	\item Claim: $T$ is unique
+	Suppose $U:V \rightarrow W$ is linear and $U(v_i)=w_i \ \ \forall i=1,\cdots,n$ \\
+	$U(x) = \sum^n_{i=1}a_iU(v_i) = \sum^n_{i=1}a_iw_i \in T(x)$ \\
+	$\implies U = T$
+\end{enumerate}

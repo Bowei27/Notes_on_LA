@@ -1,0 +1,22 @@
+$\\$ Suppose $\dim(V)=n,$ $\dim(N(T))=k$ and $\{v_i = \forall_i = 1,\cdots,k \}$ is a basis of $N(T)$\\
+$\because$ Cor of thm 1.11 $\therefore$ We can extend $\{v_i:$ for $i = 1,\cdots,k\}$ to a basis $\beta = \{v_i:$ for $i = 1,\cdots,k\}$ of $V$\\
+Claim : $S = \{T(v_i):$ for $i = k+1, \cdots, n\}$ is a basis of $R(T)$
+\begin{enumerate}
+	\item Claim $span(S) = R(T)$ \\ 
+	$\because$ Thm 2.2 
+	$\therefore R(T) = span(T(\beta)) = span(\{T(v_1), \cdots , T(v_n)\})$\\
+	$\because T(v_i) = 0$ for $i=1, \cdots, k$\\
+	$\therefore R(T) = span(\{T(v_{k+1}, \cdots, T(v_n)\}) = span(S)$ 
+	\item Claim : S is linear independent \\
+	Suppose $\sum^n_{i=k+1}b_iT(v_i)=0 \ \ \forall b_{k+1}, \cdots b_n \in F$ \\
+	$\because$ T is linear $\therefore T (\sum^n_{i=k+1}b_iv_i)=0 \implies \sum^n_{i=k+1}b_iv_i \in N(T)$ \\ \\
+	Hence, $\exists c_i \in F$ for $i = 1,\cdots,k$ \\ \\
+	$\implies \sum^n_{i=k+1}b_iv_i = \sum^n_{i=k+1}c_iv_i \implies \sum^n_{i=k+1}b_iv_i + \sum^n_{i=k+1}(-c_i)v_i = 0$ \\
+	\\
+	$\because \beta$ is a basis of $V$
+	$\therefore b_i, \forall_i = k+1, \cdots, n = 0$ \\
+	$\therefore S^n$ is linear independent\\
+	$S = \{T(v_i):$ for $i = k+1, \cdots,n \} \implies rank(T) = n-k$
+	
+	
+\end{enumerate}
