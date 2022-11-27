@@ -1,6 +1,6 @@
 \section{Linear Transformation}
 
-\section*{\S\ Linear Operator }
+\subsection{Linear Operator}
 
 \begin{defn}[Linear Transformation]
 	Let $V$ and $\mathrm{W}$ be vector spaces (over $\mathrm{F}$). We call a function $\mathrm{T}: \mathrm{V}  \rightarrow  \mathrm{W}$    a linear transformation from $\mathrm{V}$ to $\mathrm{W}$ if, for all x, y $\in$ $\mathrm{V}$ and c $\in$ $\mathrm{F}$, we have
@@ -48,10 +48,8 @@ Let $V$ and $W$ be vector spaces, and let $I:V \rightarrow V$ and $ T_0:V \right
 	Let $V$ and $W$ be vector spaces and $\mathrm{T}: \mathrm{V}  \rightarrow  \mathrm{W}$ be linear. Then $N(T)$ and $R(T)$ are subspaces of $\mathrm{V}$ and $\mathrm{W}$, respectively.
 \end{thm}
 
-\begin{proof}
-	\input{Fried/Ch.2/thm_2-1.tex}
-\end{proof}
 
+\pfshow{\input{Fried/Ch.2/thm_2-1.tex}}
 
 \begin{rmk*}
 	Give an example of distinct linear transformations $T$ and $U$ such that $N(T)=N(U)$ and $R(T)=R(U)$
@@ -61,11 +59,9 @@ Let $V$ and $W$ be vector spaces, and let $I:V \rightarrow V$ and $ T_0:V \right
 Let V and W be vector spaces, and let $\mathrm{T} : \mathrm{V}  \rightarrow \mathrm{W}$ be linear. If $\beta = \{ v_1,v_2,\cdots,v_n \}$ is a basis for $\mathrm{V}$ , then $$ \mathrm{R}(\mathrm{T}) = \mathrm{span}(\mathrm{T}(\beta)) = \mathrm{span}(\{\mathrm{T}(v_1), \mathrm{T}(v_2), . . . , \mathrm{T}(v_n)\})$$	
 \end{thm}
 
-\begin{proof}
-	\input{Fried/Ch.2/thm_2-2.tex}
+\pfshow{\input{Fried/Ch.2/thm_2-2.tex}
 	%\input{proof_of_theorems/thm_2-2.tex}
-\end{proof}
-
+}
 
 \begin{ex*}
 Prove Theorem 2.2 for the case that $\beta$ is infinite, that is, $R(T) = span(\{T(v):v \in \beta\})$. 	
@@ -75,7 +71,7 @@ Prove Theorem 2.2 for the case that $\beta$ is infinite, that is, $R(T) = span(\
   Let $\mathrm{V}$ and $\mathrm{W}$ be vector spaces and let $ \mathrm{T}: \mathrm{V}  \rightarrow  \mathrm{W}$ be linear. If $N(T)$ and $R(T)$ are finite-dimensional, then we define the nullity of $T$, denoted $nullity(T)$, and the rank of $T$, denoted $rank(T)$, to be the dimensions of $N(T)$ and $R(T)$, respectively.	
 \end{defn}
 
-\begin{thm}
+\begin{thm}[Dimension Theorem]
 	Let V and W be vector spaces,
 and let $ \mathrm{T} : \mathrm{V}  \rightarrow  \mathrm{W} $ be linear. \\ If $V$ is finite-dimensional, then
  
@@ -83,20 +79,19 @@ and let $ \mathrm{T} : \mathrm{V}  \rightarrow  \mathrm{W} $ be linear. \\ If $V
 $$	nullity(T) + rank(T) = dim(V).$$
 \end{thm}
 
-\begin{proof}
+\pfshow{
 \input{Fried/Ch.2/thm_2-3.tex}
-	%\input{proof_of_theorems/thm_2-3.tex}
-\end{proof}
+}
 
 \begin{thm}
 	Let $V$ and $W$ be vector spaces, and let $ T: V  \rightarrow  W$ be
 linear. Then $T$ is one-to-one if and only if $N(T) = \{0\}$.
 \end{thm}
 
-\begin{proof}
+\pfshow{
 	\input{Fried/Ch.2/thm_2-4.tex}
 	%\input{proof_of_theorems/thm_2-4.tex}
-\end{proof}
+}
 
 %\input{proof_of_theorems/thm_2-5.tex}
 %\input{proof_of_theorems/thm_2-6.tex}
@@ -169,9 +164,9 @@ $T$ and $U$ are called the left shift and right shift operators on $V$, respecti
 	Let $V$ and $W$ be vector spaces, and suppose that $V$ has a finite basis $\{v_1,v_2,\cdots,v_n\}.$ If $U,T:V \rightarrow W$ are linear and $U(v_i)=T(v_i)$ for $i=1,2,\cdots,n$ then $U=T.$
 \end{thm}
 
-\begin{proof}
+\pfshow{
 	\input{Fried/Ch.2/thm_2-6_cor.tex}
-\end{proof}
+}
 
 %\input{proof_of_theorems/thm_2-7.tex}
 
@@ -316,9 +311,9 @@ then $A^2=O$ (the zero matrix) even though $A \neq O.$ Thus the cancellation pro
  \end{enumerate}
 \end{thm} 
 
-\begin{proof}
+\pfshow{
 	\input{Fried/Ch.2/thm_2-13.tex}
-\end{proof}
+}
 
 \begin{thm} %Ex 2.3.14
 Assume the notation in Theorem 2.13.
@@ -330,8 +325,9 @@ Assume the notation in Theorem 2.13.
 	\end{enumerate}
 \end{thm}
 
+\pfshow{
 \input{Fried/Ch.2/ex_2-3-14.tex}
-
+}
 
 \begin{thm}%2-14
 	Let $V$ and $W$ be finite-dimensional vector spaces having ordered bases $\beta$ and $\gamma$, respectively, and let $\mathrm{T} : \mathrm{V} \rightarrow \mathrm{W}$ be linear. Then, for each $u \in \mathrm{V}$, we have
@@ -339,9 +335,9 @@ Assume the notation in Theorem 2.13.
 	
 \end{thm}
 
-\begin{proof}
+\pfshow{
 	\input{Fried/Ch.2/thm_2-14.tex}
-\end{proof}
+}
 
 \begin{defn}
 Let $A$ be an $m \times n$ matrix with entries from a field $F$ . We denote by $L_A$ the mapping $L_A : \mathrm{F}^n \rightarrow \mathrm{F}^m$ defined by $L_A(x) = Ax$ (the matrix product of $A$ and $x$) for each column vector $x \in \mathrm{F}^n$. We call $L_A$ a left-multiplication transformation.	
@@ -361,47 +357,47 @@ that $\mathrm{T} = \mathrm{L}_C$. In fact, $C = [\mathrm{T}]^\gamma_\beta$.
 	\end{enumerate}	
 \end{thm}
 
-\begin{proof}
+\pfshow{
 	\input{Fried/Ch.2/thm_2-15.tex}
-\end{proof}
+}
 
 \begin{cor}%2-15 cor1
 Let $V$ be a finite-dimensional vector space with an ordered basis $\beta$, and let $\mathrm{T} : \mathrm{V} \rightarrow \mathrm{V}$ be linear. Then $T$ is invertible if and only if $[\mathrm{T}]_\beta$ is invertible. Furthermore, $[\mathrm{T}^{-1}]_\beta = ([\mathrm{T}]_\beta)^{-1}$
 \end{cor}
 
-\begin{proof}
+\pfshow{
 	\input{Fried/Ch.2/thm_2-15_cor1.tex}
-\end{proof}
+}
 
 \begin{cor}%2-15 cor2
 	Let $A$ be an $n \times n$ matrix. Then $A$ is invertible if and only if $\mathrm{L}_A$ is invertible. Furthermore, $(\mathrm{L_A})^{-1} = \mathrm{L}_{A^{-1}}$
 \end{cor}
-\begin{proof}
+\pfshow{
 	\textbf{\color{red}not now}
 	%\input{Fried/Ch.2/thm_2-15_cor2.tex}
-\end{proof}
+}
 
 \begin{thm}%2-16
 	Let $A$,$B$, and $C$ be matrices such that $A(BC)$ is defined. Then $(AB)C$ is also defined and $A(BC) = (AB)C$ ; that is, matrix multiplication is associative.
 \end{thm}
 
 
-\input{Fried/Ch.2/thm_2-16.tex}
+\pfshow{\input{Fried/Ch.2/thm_2-16.tex}}
 
 \begin{lmma*}%2-17 lemma
 	Let $T$ be an invertible linear transformation from $V$
  to $W$. Then $V$ is finite-dimensional if and only if $W$ is finite-dimensional. In this case, $\dim(v)=\dim(W).$
- \end{lmma*}
+\end{lmma*}
  
- \input{Fried/Ch.2/thm_2-17_lmma.tex}
+\pfshow{\input{Fried/Ch.2/thm_2-17_lmma.tex}}
  
- \begin{thm}%2-18
+\begin{thm}%2-18
  Let $V$ and $W$ be finite-dimensional vector spaces with ordered bases $\beta$ and $\gamma$, respectively. Let $\mathrm{T} : \mathrm{V} \rightarrow \mathrm{W}$ be linear. Then $T$ is invertible if and only if $[\mathrm{T}]^\gamma_\beta$ is invertible. Furthermore, $[\mathrm{T}^{-1}]^\beta_\gamma = ([\mathrm{T}^\gamma_\beta])^{-1}$.	
- \end{thm}
+\end{thm}
  
- \input{Fried/Ch.2/thm_2-18.tex}
+\pfshow{\input{Fried/Ch.2/thm_2-18.tex}}
  
- \begin{thm}%2-22
+\begin{thm}%2-22
  	Let $\beta$ and $\beta'$ be two ordered bases for a finite-dimensional vector space $V$, and let $Q=\left[\begin{matrix}
  		I_V
  	\end{matrix}\right]^\beta_{\beta'}$. Then 
@@ -409,21 +405,21 @@ Let $V$ be a finite-dimensional vector space with an ordered basis $\beta$, and 
  		\item [(a)]$Q$ is invertible.
  		\item [(b)]For any $v \in V$, $[v]_\beta=Q[v]_{\beta'}$.
  	\end{enumerate}
- \end{thm}
+\end{thm}
  
- \input{Fried/Ch.2/thm_2-22.tex}
+\pfshow{\input{Fried/Ch.2/thm_2-22.tex}}
 
 \begin{thm}%2-23
 	Let $T$ be a linear operator on a finite-dimensional vector space $V$, and let $\beta$ and $\beta'$ be ordered bases for $V$. Suppose that $Q$ is the change of coordinate matrix that changes $\beta'$-coordinates into $\beta$-coordinates. Then $$[T]_{\beta'}=Q^{-1}[T]_\beta Q.$$
 \end{thm}
 
-\input{Fried/Ch.2/thm_2-23.tex}
+\pfshow{\input{Fried/Ch.2/thm_2-23.tex}}
 
 \begin{cor}%2-23 cor
 	Let $A\in M_{n \times n}(F)$, and let $\gamma$ be an ordered basis for $F^n$. Then $[L_A]=Q^{-1}AQ$, where $Q$ is the $n \times n$ matrix whose $j$th column is the $j$th vector of $\gamma.ß$
 \end{cor}
 
-\input{Fried/Ch.2/thm_2-23_cor.tex}
+\pfshow{\input{Fried/Ch.2/thm_2-23_cor.tex}}
 
 \begin{defn}
 	Let $A$ and $B$ be matrices in $M_{n \times n}(\mathrm{F})$. We say that $B$ is similar to $A$ if there exists an invertible matrix $Q$ such that $B = Q^{-1}AQ$.
@@ -433,14 +429,14 @@ Let $V$ be a finite-dimensional vector space with an ordered basis $\beta$, and 
 	"is similar to" is an equivalence relation on $M_{n \times n}(\mathrm{F})$
 \end{thm}
 
-\input{Fried/Ch.2/ex_2-5-9.tex}
+\pfshow{\input{Fried/Ch.2/ex_2-5-9.tex}}
 
 
 \begin{prop}% ex 2.5 10
 	If $A$ and $B$ are similar $n \times n$ matrices, then tr($A$) = tr($B$).
  \end{prop}
  
- \input{Fried/Ch.2/ex_2-5-10.tex}
+\pfshow{\input{Fried/Ch.2/ex_2-5-10.tex}}
  
 
 \begin{defn}
@@ -459,7 +455,7 @@ Let $V$ be a finite-dimensional vector space with an ordered basis $\beta$, and 
 	Let $V$ and $W$ be finite-dimensional vector spaces, and let $T:V \rightarrow W$ be a linear transformation. Suppose that $\beta$ is a basis for $V$. Then $T$ is an isomorphism if and only if $T(\beta)$ is a basis for $W$.
 \end{lmma}
 
-\input{Fried/Ch.2/ex_2-4-15.tex}
+\pfshow{\input{Fried/Ch.2/ex_2-4-15.tex}}
 
 
 \begin{thm}% ex 2.4 21
@@ -473,7 +469,7 @@ Let $V$ be a finite-dimensional vector space with an ordered basis $\beta$, and 
 	First prove that $\{T_{ij}~|~ 1 \leq i \leq m,~1 \leq j \leq n\}$ is a basis for $\mathscr{L}(V,W)$. Then let $M^{ij}$ be the $m \times n$ matrix with $1$ in the $i$th row and $j$th column and $0$ elsewhere, and prove that $[T_{ij}]^{\gamma}_{\beta} = M^{ij}$. Again by Thm 2.6, there exists a linear transformation $\Phi : \mathscr{L}(V,W) \rightarrow M_{m \times n}(\mathrm{F})$ such that $\Phi(T_{ij}) = M^{ij}$. Prove that $\Phi$ is an isomorphism.
 \end{thm}
 
-\input{Fried/Ch.2/ex_2-4-21.tex}
+\pfshow{\input{Fried/Ch.2/ex_2-4-21.tex}}
 
 
 \begin{defn}
@@ -483,8 +479,6 @@ Let $V$ be a finite-dimensional vector space with an ordered basis $\beta$, and 
 \begin{thm}% 2.1
 	Let $V$ and $W$ be vector spaces and $T:V \rightarrow W$ be linear. Then $N(T)$ and $R(T)$ are subspace of $V$ and $W$, respectively.
 \end{thm}
-
-%figure here
 
 \begin{center}
 		\includegraphics[scale = 0.25]{./figure/105.jpg}
@@ -512,4 +506,4 @@ that is, the diagram "commutes." Heuristically, this relationship indicates that
 	Let $T:V \rightarrow W$ be a linear transformation from an $n$-dimensional vector space $V$ to an $m$-dimensional vector space $W$. Let $\beta$ and $\gamma$ be ordered bases for $V$ and $W$, respectively. Prove that rank$(T) = $ rank$(L_A)$ and that nullity$(T) = $ nullity($L_A$), where $A = [T]^{\gamma}_{\beta}$.
 \end{thm}
 
-\input{Fried/Ch.2/ex_2-4-20.tex}
+\pfshow{\input{Fried/Ch.2/ex_2-4-20.tex}}

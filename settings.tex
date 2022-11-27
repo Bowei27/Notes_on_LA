@@ -19,8 +19,7 @@
 %\usepackage{CJKutf8}
 %\xeCJKsetup{AutoFakeBold=true, AutoFakeSlant=true}
 
-\usepackage{graphicx}
-
+\usepackage{graphicx}
 \usepackage{natbib}
 \usepackage{tabularx}
 \usepackage{multirow}
@@ -28,11 +27,7 @@
 \usepackage{hyperref}
 \usepackage{bm}
 \usepackage{float}
-
 \usepackage{multicol}
-
-
-
 
 
 % we will modify sections, subsections and sub subsections
@@ -98,6 +93,17 @@
 \newcommand{\image}[1]{Im(#1)}
 \newcommand{\redd}[1]{\textbf{\color{red}#1}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%QSnake Edition
+
+% if you change pffalse to pftrue, the proof will show
+
+\newif\ifpf\pffalse
+\newcommand{\pfshow}[1]{\ifpf #1 \else \relax \fi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \title{Lecture Notes on Linear Algebra}
 \author{CARAPAERO}
 \date{}

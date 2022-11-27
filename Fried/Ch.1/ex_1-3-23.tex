@@ -1,8 +1,11 @@
-\begin{proof}$ $
+\begin{proof}
+	To prove $(a)$, we first show that $W_{1}+W_{2}$ is a subspace of $V$. Clearly, $0=0+0 \in W_{1}+W_{2}$. Let $x=x_{1}+x_{2}$, $y=y_{1}+y_{2}$, $c \in \mathbb{F}$
 
-	\begin{itemize}
-				\item [(a)] Since $W_1$ and $W_2$ are subspaces of $V$, so $0 = 0 + 0 \in W_1 + W_2$. Given $v,w \in W_1 + W_2$ and $c \in \mathbb{F}$. Then there exist $x_i$ and $y_i$ in $W_i$ for all $i = 1,2$ such that $v = x_1 + x_2$ and $w = y_1 + y_2$. We get that $cv + w = c( x_1 + x_2) + ( y_1 + y_2) = (cx_1 + y_1) + cx_2 + y_2 \in W_1 + W_2$. It follows that $W_1$ and $W_2$ are subspaces of $V$ such that $cx_i + y_i$ in $W_i$ for all $i = 1,2$. It proves that $W_1 + W_2$ is a subsapce of $V$. For all $v$ in $W_1 + W_2$, $v$ can be written as $v = x_1 + x_2$ with $x_i \in W_i$ for all $i = 1,2$. If we take $x_2 = 0$, then we get that $v = x_1 \in W_1$. Similarly, if we take $x_1 = 0$, then $v \in W_2$. Hence $W_1 + W_2$ contians both $W_1$ and $W_2$.
-				\item [(b)] For any subsapces $W$ of $V$ that contains both $W_1$ and $W_2$, we have to show that $W_1 + W_2 \subseteq W$. Given $v \in W_1 + W_2$. Then there exist $x_1$ in $W_1$ and $x_2$ in $W_2$ such that $v = x_1 + x_2$. Clearly, $v \in W$ by our assumption. It shows that $W_1 + W_2$ is the smallest subspace of $V$ containing both $W_1$ and $W_2$.
-			\end{itemize}
+$cx+y=c(x_{1}+x_{2})+(y_{1}+y_{2})=(cx_{1}+y_{1})+(cx_{2}+y_{2}) \in W_{1}+W_{2}$
+
+By corrolary 1.1.1, $W_{1}+W_{2}$ is a subspace of $V$.
+
+Then we show that $W_{1}, W_{2} \subseteq W_{1}+W_{2}$. $\forall x \in W_{1} y \in W_{2}$, $x=x+0 \in W_{1}+W_{2}$, $y=0+y \in W_{1}+W_{2}$, we have $W_{1}, W_{2} \subseteq W_{1}+W_{2}$.
+
+To prove $(b)$, Let $W$ be a subspace of $V$ contains both $W_{1}$ and $W_{2}$, then $\forall x \in W_{1} , y \in W_{2}$, $x+y \in W_{1}+W_{2}$. Thus $W_{1}+W_{2} \subseteq W$. 
 \end{proof}
-			
